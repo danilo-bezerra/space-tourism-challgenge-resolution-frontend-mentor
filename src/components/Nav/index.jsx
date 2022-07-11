@@ -1,10 +1,10 @@
-import React from "react";
-
+import React, { useState } from "react";
+import ButtonNavbar from "../ButtonNavbar";
 import { Nav, NavLinks, Link } from "./styles";
 
-export default () => {
+export default ({ showNavbarMobile, onBtnNavbarPress }) => {
   return (
-    <Nav>
+    <Nav showNavbarMobile={showNavbarMobile}>
       <NavLinks>
         <li>
           <Link to="/" isActive={(props) => props}>
@@ -30,6 +30,7 @@ export default () => {
             <span>04</span> TECHNOLOGY
           </Link>
         </li>
+        <ButtonNavbar showNavbarMobile={showNavbarMobile} onClick={onBtnNavbarPress} />
       </NavLinks>
     </Nav>
   );

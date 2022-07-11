@@ -6,7 +6,27 @@ export const Nav = styled.nav`
   height: 6rem;
   width: 100%;
   max-width: 830px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(35px);
+
+  @media (max-width: 900px) {
+    max-width: max-content;
+    padding: 0 2.5rem;
+  }
+
+  @media (max-width:768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 75%;
+    transform: translateX(${({ showNavbarMobile }) => showNavbarMobile ? '0px' : '100%'});
+
+    button {
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+    }
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -15,6 +35,13 @@ export const NavLinks = styled.ul`
   align-items: center;
   gap: 1.5rem;
   list-style: none;
+
+  @media (max-width: 768px) {
+    margin-top: 10rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
 `;
 
 export const Link = styled(routerLink)`
@@ -31,6 +58,10 @@ export const Link = styled(routerLink)`
   border-bottom-color: ${({ isActive }) => (isActive ? "#fff" : "transparent")};
   &:hover {
     border-bottom-color: ${({ isActive }) => (isActive ? "#fff" : "#fff9")};
+  }
+
+  @media (max-width: 768px) {
+    height: max-content;
   }
 
   span {
