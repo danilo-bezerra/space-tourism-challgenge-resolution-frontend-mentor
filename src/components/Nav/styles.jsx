@@ -69,7 +69,7 @@ export const Link = styled(routerLink)`
   }
 
   @media (max-width: 700px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
     height: max-content;
   }
 

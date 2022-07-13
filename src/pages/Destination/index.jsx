@@ -3,16 +3,10 @@ import Header from "../../components/Header";
 
 import Page from "../../components/Page";
 
-import bgImageDesktop from "../../assets/destination/background-destination-desktop.jpg";
-import bgImageTablet from "../../assets/destination/background-destination-tablet.jpg";
-import bgImageMobile from "../../assets/destination/background-destination-mobile.jpg";
-
 import Section from "../../components/Section";
-import ButtonExplore from "../../components/ButtonExplore";
 import Text from "../../components/Text";
-import Heading1 from "../../components/Heading1";
-import Heading4 from "../../components/Heading5";
 import Box from "../../components/Box";
+
 import {
   DestinationOption,
   Image,
@@ -23,16 +17,20 @@ import {
   Separator,
 } from "./styles";
 
+import bgImageDesktop from "../../assets/destination/background-destination-desktop.jpg";
+import bgImageTablet from "../../assets/destination/background-destination-tablet.jpg";
+import bgImageMobile from "../../assets/destination/background-destination-mobile.jpg";
+
 import Moon from "../../assets/destination/image-moon.png";
 import Mars from "../../assets/destination/image-mars.png";
 import Europa from "../../assets/destination/image-europa.png";
 import Titan from "../../assets/destination/image-titan.png";
 
 import data from "../../data.json";
-import Subheading2 from "../../components/Subheading2";
 
 const Destination = () => {
-  const [destinations, setDestinations] = useState(data.destinations);
+  const destinations = data.destinations;
+
   const [selectedDestination, setSelectedDestination] = useState(
     destinations[0]
   );
@@ -94,13 +92,11 @@ const Destination = () => {
 
           <DestinationInfoContainer>
             <DestinationInfo>
-              <Subheading2 >
-                AVG. DISTANCE
-              </Subheading2>
+              <h3>AVG. DISTANCE</h3>
               <strong>{selectedDestination.distance}</strong>
             </DestinationInfo>
             <DestinationInfo>
-              <Subheading2>EST. TRAVEL TIME</Subheading2>
+              <h3>EST. TRAVEL TIME</h3>
               <strong>{selectedDestination.travel}</strong>
             </DestinationInfo>
           </DestinationInfoContainer>

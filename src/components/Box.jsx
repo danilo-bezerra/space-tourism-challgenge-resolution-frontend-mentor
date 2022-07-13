@@ -7,14 +7,14 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 450px;
+  max-width: ${({ width }) => (width ? `${width}px` : "450px")};
 
   @media (max-width: 450px) {
     justify-content: flex-start;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 `;
 
-export default ({ children }) => {
-  return <Box>{children}</Box>;
+export default ({ children, width }) => {
+  return <Box width={width}>{children}</Box>;
 };

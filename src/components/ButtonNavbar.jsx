@@ -8,7 +8,7 @@ const Button = styled.button`
   display: none;
   cursor: pointer;
   img {
-    width: 1.75rem;
+    width: 2rem;
   }
 
    @media (max-width: 700px) {

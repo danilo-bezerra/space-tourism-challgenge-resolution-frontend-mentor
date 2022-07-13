@@ -10,7 +10,6 @@ const Page = styled.div`
   background-position: center;
   background-color: #333;
   min-height: 100vh;
-  padding-bottom: 5rem;
 
   @media (max-width: 900px) {
     background-image: url(${({ bgImage }) => bgImage.tablet});

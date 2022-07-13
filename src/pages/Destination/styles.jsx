@@ -78,6 +78,14 @@ export const DestinationInfo = styled.div`
   flex-direction: column;
   gap: 1rem;
 
+  h3 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 2.35px;
+    color: #d0d6f9;
+  }
+
   strong {
     font-family: "Bellefair", serif;
     font-size: 28px;

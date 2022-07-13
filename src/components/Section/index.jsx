@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Subheading1 from "../Subheading1";
 
 const Container = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,24 +21,52 @@ const Section = styled.section`
   width: 100%;
   margin: auto;
 
-  
-
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
   }
+
+  @media (max-width: 450px) {
+    flex-direction: ${({ columnReverse }) =>
+      columnReverse ? "column-reverse" : "column"};
+  }
 `;
 
-export default ({ children, sectionTitle, sectionNumber }) => {
+const SectionTitle = styled.h2`
+  font-family: "Bellefair", serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+
+  span {
+    font-weight: bold;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+`;
+
+export default ({
+  children,
+  sectionTitle,
+  sectionNumber,
+  columnReverse,
+  className,
+}) => {
   return (
-    <Container>
+    <Container className={className}>
       {sectionTitle !== undefined && (
-        <Subheading1>
+        <SectionTitle>
           <span>{sectionNumber}</span> {sectionTitle}
-        </Subheading1>
+        </SectionTitle>
       )}
-      <Section>{children}</Section>
+      <Section columnReverse={columnReverse} className={className}>
+        {children}
+      </Section>
     </Container>
   );
 };

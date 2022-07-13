@@ -7,6 +7,8 @@ const Text = styled.p`
   line-height: 36px;
   font-weight: normal;
   color: #d0d6f9;
+  max-width: 450px;
+  align-self: flex-start;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -18,6 +20,6 @@ const Text = styled.p`
   }
 `;
 
-export default ({children}) => {
+export default ({ children }) => {
   return <Text>{children}</Text>;
 };
