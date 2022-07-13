@@ -3,9 +3,9 @@ import Header from "../../components/Header";
 
 import Page from "../../components/Page";
 
-import bgImageDesktop from "../../assets/Crew/background-Crew-desktop.jpg";
-import bgImageTablet from "../../assets/Crew/background-Crew-tablet.jpg";
-import bgImageMobile from "../../assets/Crew/background-Crew-mobile.jpg";
+import bgImageDesktop from "../../assets/crew/background-Crew-desktop.jpg";
+import bgImageTablet from "../../assets/crew/background-Crew-tablet.jpg";
+import bgImageMobile from "../../assets/crew/background-Crew-mobile.jpg";
 
 import Section from "../../components/Section";
 
