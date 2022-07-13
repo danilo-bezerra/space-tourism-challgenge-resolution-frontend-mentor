@@ -6,7 +6,6 @@ const Heading = styled.p`
   font-size: 28px;
   font-weight: normal;
   color: #fff;
-  margin-bottom: 2.5rem;
   text-transform: uppercase;
 
   span {

@@ -11,6 +11,11 @@ const Text = styled.p`
   @media (max-width: 768px) {
     text-align: center;
   }
+
+  @media (max-width: 450px) {
+    font-size: 15px;
+    line-height: 25px;
+  }
 `;
 
 export default ({children}) => {

@@ -20,6 +20,7 @@ import {
   DestinationName,
   DestinationInfoContainer,
   DestinationInfo,
+  Separator,
 } from "./styles";
 
 import Moon from "../../assets/destination/image-moon.png";
@@ -29,7 +30,6 @@ import Titan from "../../assets/destination/image-titan.png";
 
 import data from "../../data.json";
 import Subheading2 from "../../components/Subheading2";
-import Subheading1 from "../../components/Subheading1";
 
 const Destination = () => {
   const [destinations, setDestinations] = useState(data.destinations);
@@ -40,7 +40,6 @@ const Destination = () => {
 
   function handleChangeDestination(e) {
     const selected = destinations.find((i) => i.name === e.target.innerHTML);
-    console.log(selected);
     setSelectedDestination(selected);
   }
 
@@ -79,22 +78,30 @@ const Destination = () => {
             {destinations.map(({ name }) => (
               <DestinationOption
                 onClick={handleChangeDestination}
+                isActive={selectedDestination.name === name}
                 key={Math.random() * 9999}
               >
                 {name}
               </DestinationOption>
             ))}
           </DestinationNav>
+
           <DestinationName>{selectedDestination.name}</DestinationName>
+
           <Text>{selectedDestination.description}</Text>
+
+          <Separator />
+
           <DestinationInfoContainer>
             <DestinationInfo>
-              <Subheading2>AVG. DISTANCE</Subheading2>
-              <Subheading1>{selectedDestination.distance}</Subheading1>
+              <Subheading2 >
+                AVG. DISTANCE
+              </Subheading2>
+              <strong>{selectedDestination.distance}</strong>
             </DestinationInfo>
             <DestinationInfo>
               <Subheading2>EST. TRAVEL TIME</Subheading2>
-              <Subheading1>{selectedDestination.travel}</Subheading1>
+              <strong>{selectedDestination.travel}</strong>
             </DestinationInfo>
           </DestinationInfoContainer>
         </Box>

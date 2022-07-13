@@ -9,7 +9,10 @@ const Container = styled.div`
   gap: 2.5rem;
   max-width: 1200px;
   margin: auto;
-  flex: 1;
+
+  @media (max-width: 450px) {
+    max-width: 327px;
+  }
 `;
 
 const Section = styled.section`
@@ -18,11 +21,12 @@ const Section = styled.section`
   width: 100%;
   margin: auto;
 
+  
+
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
-    gap: 7.5rem;
-    margin-top: 5rem;
+    gap: 2.5rem;
   }
 `;
 

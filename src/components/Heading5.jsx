@@ -10,8 +10,8 @@ const Heading = styled.h5`
   text-transform: uppercase;
 
   @media (max-width: 450px) {
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 16px;
+    letter-spacing: 2.7px;
     text-align: center;
   }
 `;

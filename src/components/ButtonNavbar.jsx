@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Link as routerLink } from "react-router-dom";
 
-import hamburguerIcon from "../assets/shared/icon-hamburger.svg";
+import hamburgerIcon from "../assets/shared/icon-hamburger.svg";
 import closeIcon from "../assets/shared/icon-close.svg";
 
 const Button = styled.button`
   display: none;
+  cursor: pointer;
   img {
     width: 1.75rem;
   }
@@ -15,10 +16,10 @@ const Button = styled.button`
    }
 `;
 
-export default ({ showNavbarMobile, ...props }) => {
+export default ({ type, ...props }) => {
   return (
     <Button {...props}>
-      <img src={showNavbarMobile ? closeIcon : hamburguerIcon} />
+      <img src={type == 'open' ? hamburgerIcon : closeIcon} />
     </Button>
   );
 };

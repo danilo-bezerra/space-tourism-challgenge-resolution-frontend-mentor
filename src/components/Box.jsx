@@ -8,6 +8,11 @@ const Box = styled.div`
   justify-content: center;
   flex-direction: column;
   max-width: 450px;
+
+  @media (max-width: 450px) {
+    justify-content: flex-start;
+    gap: .5rem;
+  }
 `;
 
 export default ({ children }) => {

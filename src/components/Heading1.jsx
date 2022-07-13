@@ -9,7 +9,8 @@ const Heading = styled.h1`
   color: #fff;
 
   @media (max-width: 450px) {
-    font-size: 5rem;
+    line-height: 100px;
+    font-size: 80px;
     text-align: center;
   }
 `;

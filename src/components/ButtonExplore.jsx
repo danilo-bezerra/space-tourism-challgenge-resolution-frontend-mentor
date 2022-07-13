@@ -27,7 +27,7 @@ const Link = styled(routerLink)`
   @media (max-width: 768px) {
     height: 14rem;
     width: 14rem;
-    margin-top: -3rem;
+    margin-top: 3rem;
 
     &:hover {
       outline: 4rem solid #fff5;
