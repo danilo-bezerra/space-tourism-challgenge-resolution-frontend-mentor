@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import ButtonNavbar from "../ButtonNavbar";
 import { Nav, NavLinks, Link } from "./styles";
 
@@ -7,13 +8,15 @@ export default ({ showNavbarMobile, onBtnNavbarPress }) => {
     <Nav showNavbarMobile={showNavbarMobile}>
       <NavLinks>
         <li>
-          <Link to="/" isActive={(props) => props}>
+          <Link to="/">
             {" "}
             <span>01</span> HOME
           </Link>
         </li>
         <li>
-          <Link to="/destination">
+          <Link
+            to="/destination"
+          >
             {" "}
             <span>02</span> DESTINATION
           </Link>
@@ -30,7 +33,10 @@ export default ({ showNavbarMobile, onBtnNavbarPress }) => {
             <span>04</span> TECHNOLOGY
           </Link>
         </li>
-        <ButtonNavbar showNavbarMobile={showNavbarMobile} onClick={onBtnNavbarPress} />
+        <ButtonNavbar
+          showNavbarMobile={showNavbarMobile}
+          onClick={onBtnNavbarPress}
+        />
       </NavLinks>
     </Nav>
   );

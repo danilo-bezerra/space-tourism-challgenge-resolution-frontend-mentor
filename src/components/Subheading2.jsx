@@ -1,17 +1,12 @@
 import styled from "styled-components";
 import { Link as routerLink } from "react-router-dom";
 
-const Heading = styled.h1`
-  font-family: "Bellefair", serif;
-  font-size: 9rem;
-  line-height: 10.75rem;
+const Heading = styled.p`
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
   font-weight: normal;
-  color: #fff;
-
-  @media (max-width: 450px) {
-    font-size: 5rem;
-    text-align: center;
-  }
+  letter-spacing: 2.35px;
+  color: #d0d6f9;
 `;
 
 export default ({ children }) => {

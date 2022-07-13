@@ -7,7 +7,6 @@ const Text = styled.p`
   line-height: 36px;
   font-weight: normal;
   color: #d0d6f9;
-  margin: 1.5rem 0;
 
   @media (max-width: 768px) {
     text-align: center;

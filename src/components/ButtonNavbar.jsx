@@ -10,7 +10,7 @@ const Button = styled.button`
     width: 1.75rem;
   }
 
-   @media (max-width: 768px) {
+   @media (max-width: 700px) {
     display: block;background-color: transparent;
    }
 `;

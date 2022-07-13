@@ -13,7 +13,7 @@ export const Nav = styled.nav`
     padding: 0 2.5rem;
   }
 
-  @media (max-width:768px) {
+  @media (max-width:700px) {
     position: absolute;
     top: 0;
     right: 0;
@@ -36,7 +36,7 @@ export const NavLinks = styled.ul`
   gap: 1.5rem;
   list-style: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     margin-top: 10rem;
     flex-direction: column;
     gap: 2rem;
@@ -55,12 +55,12 @@ export const Link = styled(routerLink)`
   letter-spacing: 2.7px;
   height: 6rem;
   border: 2px solid transparent;
-  border-bottom-color: ${({ isActive }) => (isActive ? "#fff" : "transparent")};
+  border-bottom-color: ${({ isactive }) => (isactive ? "#fff" : "transparent")};
   &:hover {
-    border-bottom-color: ${({ isActive }) => (isActive ? "#fff" : "#fff9")};
+    border-bottom-color: ${({ isactive }) => (isactive ? "#fff" : "#fff9")};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     height: max-content;
   }
 

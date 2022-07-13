@@ -7,10 +7,11 @@ const Page = styled.div`
   background-image: url(${({ bgImage }) => bgImage.desktop});
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   background-color: #333;
   min-height: 100vh;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     background-image: url(${({ bgImage }) => bgImage.tablet});
   }
 
