@@ -41,6 +41,7 @@ export const NavLinks = styled.ul`
 
     &.active {
       transform: translateX(0);
+      z-index: 99;
     }
 
     button {
